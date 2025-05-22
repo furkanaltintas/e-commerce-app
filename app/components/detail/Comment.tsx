@@ -1,15 +1,19 @@
 "use client";
-import Avatar from "../general/Avatar";
+import { RxAvatar } from "react-icons/rx";
+import { Rating } from "@mui/material";
 
 const Comment = ({ prd }: { prd: any }) => {
   return (
-    <div className="border border-slate-300 w-full md:w-1/2 p-4 rounded-lg mb-4">
+    <div className="border w-full md:w-1/3 p-2 rounded-lg my-3">
       <div className="flex items-center gap-1">
-        <Avatar image={prd?.user?.image} />
-        <div>{prd?.user?.name}</div>
+        <RxAvatar size="45" />
+        <div>
+          <div>{prd?.user?.name}</div>
+          <Rating name="read-only" value={prd?.user?.rating} readOnly />
+        </div>
       </div>
-      <div className="mt-1">
-        <p className="text-slate-500">{prd?.comment}</p>
+      <div className="text-slate-500">
+        {prd.comment} asdasd asdasdasd asdasdas dasdasdasd
       </div>
     </div>
   );

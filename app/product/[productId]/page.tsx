@@ -1,6 +1,5 @@
 import DetailClient from "@/app/components/detail/DetailClient";
 import { products } from "@/utils/Products";
-import { log } from "console";
 
 type DetailProps = {
     productId?: string;

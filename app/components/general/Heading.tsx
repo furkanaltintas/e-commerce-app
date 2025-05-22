@@ -8,10 +8,10 @@ interface HeadingProps {
 const Heading: React.FC<HeadingProps> = ({
   text,
   center = false,
-  useDefaultStyles = false,
+  useDefaultStyles = true,
   customClassName = "",
 }) => {
-  const defaultStyles = "text-slate-500 my-3 md:my-10 px-3 md:px-12 md:text-xl";
+  const defaultStyles = "text-slate-500 my-3 md:my-5 px-3 md:px-12 md:text-xl";
   const appliedClassName = `${
     useDefaultStyles ? defaultStyles : customClassName
   } ${center ? "text-center" : "text-start"}`;

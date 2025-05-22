@@ -1,13 +1,22 @@
-
 interface HeadingProps {
-    center?: boolean,
-    text: string
+  center?: boolean;
+  text: string;
+  useDefaultStyles?: boolean;
+  customClassName?: string;
 }
 
-const Heading:React.FC<HeadingProps> = ({center, text}) => {
-  return (
-    <div className={`text-slate-500 my-3 md:my-10 px-3 md:px-10 md:text-xl ${center ? 'text-center' : 'text-start'}`}>{text}</div>
-  )
-}
+const Heading: React.FC<HeadingProps> = ({
+  text,
+  center = false,
+  useDefaultStyles = false,
+  customClassName = "",
+}) => {
+  const defaultStyles = "text-slate-500 my-3 md:my-10 px-3 md:px-12 md:text-xl";
+  const appliedClassName = `${
+    useDefaultStyles ? defaultStyles : customClassName
+  } ${center ? "text-center" : "text-start"}`;
 
-export default Heading
+  return <div className={appliedClassName}>{text}</div>;
+};
+
+export default Heading;

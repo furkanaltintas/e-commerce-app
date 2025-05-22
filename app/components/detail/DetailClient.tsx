@@ -78,7 +78,7 @@ const DetailClient = ({ product }: { product: any }) => {
             <Button text="Sepete Ekle" onClick={() => {}} />
           </div>
         </div>
-        <Heading text={`Yorumlar ${reviewCount > 0 ? `(${reviewCount})` : ""}`} />
+        <Heading text={`Yorumlar ${reviewCount > 0 ? `(${reviewCount})` : ""}`} customClassName="text-slate-500 my-3 md:my-6 md:text-xl" />
         <div>
           {reviewCount > 0 ? (
             product?.reviews?.map((prd: any) => (

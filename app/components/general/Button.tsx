@@ -1,0 +1,26 @@
+import { IconType } from "react-icons";
+
+interface ButtonProps {
+  text: string;
+  onClick: (e: React.MouseEvent<HTMLButtonElement>) => void;
+  small?: boolean;
+  outline?: boolean;
+  //icon?: IconType
+  disabled?: boolean;
+}
+
+const Button = ({ text, onClick, small, outline, disabled }: ButtonProps) => {
+  return (
+    <button
+      disabled={disabled}
+      className={`rounded-lg p-3 ${small ? "w-[250px]" : "w-full"} ${
+        outline ? "border text-black" : "bg-black text-white"
+      }`}
+      onClick={() => onClick}
+    >
+      {text}
+    </button>
+  );
+};
+
+export default Button;

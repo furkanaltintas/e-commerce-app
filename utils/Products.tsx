@@ -7,21 +7,19 @@ export const products = [
     brand: "apple",
     category: "Phone",
     inStock: true,
-    image:
-      "https://firebasestorage.googleapis.com/v0/b/ecommerce-shop-cc542.appspot.com/o/products%2F1688622161445-iphone14-white.png?alt=media&token=fe2065e5-fdfe-4a6f-baa6-380b5fad90b8",
+    image: "https://placehold.co/600x400",
     reviews: [],
   },
   {
     id: "64a4ebe300900d44bb50628a",
     name: "Logitech MX",
     description:
-      "PERFECT STROKE KEYS - Spherically-dished keys match the shape of your fingertips, offering satisfying feedback with every tap\nCOMFORT AND STABILITY - Type with confidence on a keyboard crafted for comfort, stability, and precision",
+      'The product is refurbished, fully functional, and in excellent condition. Backed by the 90-day E~Shop Renewed Guarantee.\n- This pre-owned product has been professionally inspected, tested and cleaned by Amazon qualified vendors. It is not certified by Apple.\n- This product is in "Excellent condition". The screen and body show no signs of cosmetic damage visible from 12 inches away.\n- This product will have a battery that exceeds 80% capacity relative to new.\n- Accessories may not be original, but will be compatible and fully functional. Product may come in generic box.\n- Product will come with a SIM removal tool, a charger and a charging cable. Headphone and SIM card are not included.\n- This product is eligible for a replacement or refund within 90-day of receipt if it does not work as expected.\n- Refurbished phones are not guaranteed to be waterproof.',
     price: 102.99,
     brand: "logitech",
     category: "Accesories",
     inStock: true,
-    image:
-      "https://firebasestorage.googleapis.com/v0/b/ecommerce-shop-cc542.appspot.com/o/products%2F1688622161445-iphone14-white.png?alt=media&token=fe2065e5-fdfe-4a6f-baa6-380b5fad90b8",
+    image: "https://placehold.co/600x400",
     reviews: [
       {
         id: "64a65a6158b470c6e06959ee",
@@ -74,8 +72,7 @@ export const products = [
     brand: "Apple",
     category: "Phone",
     inStock: true,
-    image:
-      "https://firebasestorage.googleapis.com/v0/b/ecommerce-shop-cc542.appspot.com/o/products%2F1688622161445-iphone14-white.png?alt=media&token=fe2065e5-fdfe-4a6f-baa6-380b5fad90b8",
+    image: "https://placehold.co/600x400",
     reviews: [
       {
         id: "6499b4887402b0efd394d8f3",
@@ -128,8 +125,7 @@ export const products = [
     brand: "logitech",
     category: "Accesories",
     inStock: true,
-    image:
-      "https://firebasestorage.googleapis.com/v0/b/ecommerce-shop-cc542.appspot.com/o/products%2F1688622161445-iphone14-white.png?alt=media&token=fe2065e5-fdfe-4a6f-baa6-380b5fad90b8",
+    image: "https://placehold.co/600x400",
     reviews: [],
   },
   {
@@ -140,9 +136,8 @@ export const products = [
     price: 50,
     brand: "Nerunsa",
     category: "Watch",
-    inStock: true,
-    image:
-      "https://firebasestorage.googleapis.com/v0/b/ecommerce-shop-cc542.appspot.com/o/products%2F1688622161445-iphone14-white.png?alt=media&token=fe2065e5-fdfe-4a6f-baa6-380b5fad90b8",
+    inStock: false,
+    image: "https://placehold.co/600x400",
     reviews: [],
   },
 ];

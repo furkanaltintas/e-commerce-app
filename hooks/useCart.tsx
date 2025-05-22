@@ -37,7 +37,7 @@ export const CartContextProvider = (props: Props) => {
     (product: CardProductProps) => {
       let updatedCart;
       if (product.quantity == 10) {
-        return toast.error("Daha fazla ekleyemezsin...");
+        return toast.error("Daha fazla ekleyemezsin...", { id: "add-to-basket-increase-error" });
       }
       if (cartPrdcts) {
         updatedCart = [...cartPrdcts];
@@ -46,8 +46,7 @@ export const CartContextProvider = (props: Props) => {
         );
 
         if (existingItem > -1) {
-          updatedCart[existingItem].quantity = ++updatedCart[existingItem]
-            .quantity;
+          updatedCart[existingItem].quantity += 1;
         }
         setCartPrdcts(updatedCart);
         localStorage.setItem("cart", JSON.stringify(updatedCart));
@@ -60,7 +59,7 @@ export const CartContextProvider = (props: Props) => {
     (product: CardProductProps) => {
       let updatedCart;
       if (product.quantity == 1) {
-        return toast.error("Daha az ekleyemezsin...");
+        return toast.error("Daha az ekleyemezsin...", { id: "add-to-basket-decrease-error" });
       }
       if (cartPrdcts) {
         updatedCart = [...cartPrdcts];
@@ -69,8 +68,7 @@ export const CartContextProvider = (props: Props) => {
         );
 
         if (existingItem > -1) {
-          updatedCart[existingItem].quantity = --updatedCart[existingItem]
-            .quantity;
+          updatedCart[existingItem].quantity -= 1;
         }
         setCartPrdcts(updatedCart);
         localStorage.setItem("cart", JSON.stringify(updatedCart));
@@ -81,7 +79,7 @@ export const CartContextProvider = (props: Props) => {
 
   const removeCart = useCallback(() => {
     setCartPrdcts(null);
-    toast.success("Sepet Temizlendi...");
+    toast.success("Sepet Temizlendi...", { id: "remove-cart" });
     localStorage.setItem("cart", JSON.stringify(null));
   }, []);
 
@@ -89,7 +87,7 @@ export const CartContextProvider = (props: Props) => {
     (product: CardProductProps) => {
       setCartPrdcts((prev) => {
         const updatedCart = prev ? [...prev, product] : [product];
-        toast.success("Ürün Sepete Eklendi...");
+        toast.success("Ürün Sepete Eklendi...", { id: "add-to-basket" });
         localStorage.setItem("cart", JSON.stringify(updatedCart));
         return updatedCart;
       });
@@ -105,7 +103,7 @@ export const CartContextProvider = (props: Props) => {
         );
 
         setCartPrdcts(filteredProducts);
-        toast.success("Ürün Sepetten Silindi...");
+        toast.success("Ürün Sepetten Silindi...", { id: "remove-from-cart" });
         localStorage.setItem("cart", JSON.stringify(filteredProducts));
       }
     },

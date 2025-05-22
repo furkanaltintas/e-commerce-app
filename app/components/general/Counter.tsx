@@ -11,7 +11,7 @@ const Counter: React.FC<CounterProps> = ({
   decreaseFunc,
 }) => {
   const buttonStyle =
-    "w-8 h-8 border flex items-center justify-center text-lg rounded-md";
+    "w-8 h-8 border border-gray-300 flex items-center justify-center text-lg rounded-md cursor-pointer";
   return (
     <div className="flex items-center gap-2">
       <div className={buttonStyle} onClick={decreaseFunc}>
